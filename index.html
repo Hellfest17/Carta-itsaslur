@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITSAS-LUR</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #1e1e1e;
+        }
+        header h1 {
+            font-size: 36px;
+            color: #f5a623;
+            margin: 0;
+        }
+        .language-buttons {
+            text-align: center;
+            margin: 20px;
+        }
+        .language-buttons button {
+            background-color: #f5a623;
+            color: #121212;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .language-buttons button:hover {
+            background-color: #d4881e;
+        }
+        .menu-container {
+            text-align: center;
+            display: none;
+        }
+        .menu-container img {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1e1e1e;
+            color: #999;
+        }
+        footer a {
+            color: #f5a623;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function showMenu(language) {
+            // Ocultar todos los menús
+            document.querySelectorAll('.menu-container').forEach(menu => {
+                menu.style.display = 'none';
+            });
+
+            // Mostrar el menú seleccionado
+            document.getElementById(language).style.display = 'block';
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            // Mostrar por defecto el menú en español
+            showMenu('spanish');
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>ITSAS-LUR</h1>
+    </header>
+    <div class="language-buttons">
+        <button onclick="showMenu('spanish')">Español</button>
+        <button onclick="showMenu('english')">English</button>
+        <button onclick="showMenu('euskera')">Euskera</button>
+    </div>
+    <div id="spanish" class="menu-container">
+        <img src="1.png" alt="Menú Español Parte 1">
+        <img src="4.png" alt="Menú Español Parte 2">
+        <img src="7.png" alt="Menú Español Parte 3">
+    </div>
+    <div id="english" class="menu-container">
+        <img src="2.png" alt="English Menu Part 1">
+        <img src="5.png" alt="English Menu Part 2">
+        <img src="8.png" alt="English Menu Part 3">
+    </div>
+    <div id="euskera" class="menu-container">
+        <img src="3.png" alt="Euskera Menu Part 1">
+        <img src="6.png" alt="Euskera Menu Part 2">
+        <img src="9.png" alt="Euskera Menu Part 3">
+    </div>
+    <footer>
+        <p>Síguenos en Instagram: <a href="https://instagram.com/ITSASLUR_MARKINA" target="_blank">@ITSASLUR_MARKINA</a></p>
+    </footer>
+</body>
+</html>
